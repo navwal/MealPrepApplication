@@ -28,6 +28,11 @@ namespace MealPrepApplication.Controllers
         {
             Meal meal = id switch
             {
+                3 => new Meal
+                {
+                    Title = "Grilled Balsamic Chicken with Burrata and Peaches",
+                    Ingredients = Utilities.getIngredients("Grilled Balsamic Chicken with Burrata and Peaches")
+                },
                 4 => new Meal
                 {
                     Title = "Marry Me chimkin Meatballs",
