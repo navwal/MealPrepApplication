@@ -12,11 +12,17 @@ namespace MealPrepApplication.Views.Shared
 
             switch (mealname)
             {
+                case "Chimkin Carnitas Tacos w/ Avocado Sauce":
+                    list = get_Chicken_Carnitas_Tacos_with_Avocado_Sauce();
+                    break;
                 case "Grilled Balsamic Chicken with Burrata and Peaches":
                     list = get_Balsamic_Chicken_with_Peaches_Burrata();
                     break;
                 case "Marry Me Chicken Meatballs":
                     list = get_Marry_Me_Chicken_Meatballs_list();
+                    break;
+                case "Teriyaki Pineapple Chicken Meatballs":
+                    list = get_Teriyaki_Pineapple_Chicken_Meatballs();
                     break;
                 default:
                     break;
@@ -37,7 +43,7 @@ namespace MealPrepApplication.Views.Shared
                                                                 Marry_Me_Chicken_Meatballs.pepper,
                                                                 new Items(),
                                                                 new Items(),
-                                                                new Items(0, "For the", "Sauce"),
+                                                                new Items(0, "For the", "Sauce:"),
                                                                 new Items(),
                                                                 new Items(),
                                                                 Marry_Me_Chicken_Meatballs.sauce_onion,
@@ -66,6 +72,67 @@ namespace MealPrepApplication.Views.Shared
                                                         Balsamic_Chicken_with_Peaches_Burrata.peaches,
                                                         Balsamic_Chicken_with_Peaches_Burrata.basil};
             return itemList;
+        }
+
+        public static List<Items> get_Teriyaki_Pineapple_Chicken_Meatballs()
+        {
+            List<Items> itemList = new List<Items>
+            {
+                Teriyaki_Pineapple_Chicken_Meatballs.chimkin,
+                Teriyaki_Pineapple_Chicken_Meatballs.egg,
+                Teriyaki_Pineapple_Chicken_Meatballs.breadcrumbs,
+                Teriyaki_Pineapple_Chicken_Meatballs.pineapple_juice,
+                Teriyaki_Pineapple_Chicken_Meatballs.soy_sauce,
+                Teriyaki_Pineapple_Chicken_Meatballs.garlic,
+                Teriyaki_Pineapple_Chicken_Meatballs.onion,
+                Teriyaki_Pineapple_Chicken_Meatballs.pepper,
+                Teriyaki_Pineapple_Chicken_Meatballs.pineapple,
+                Teriyaki_Pineapple_Chicken_Meatballs.red_bell,
+                Teriyaki_Pineapple_Chicken_Meatballs.green_bell,
+                new Items(),
+                new Items(),
+                new Items(0, "For the", "Sauce:"),
+                new Items(),
+                new Items(),
+                Teriyaki_Pineapple_Chicken_Meatballs.sauce_soy_sauce,
+                Teriyaki_Pineapple_Chicken_Meatballs.water,
+                Teriyaki_Pineapple_Chicken_Meatballs.sauce_garlic,
+                Teriyaki_Pineapple_Chicken_Meatballs.honey,
+                Teriyaki_Pineapple_Chicken_Meatballs.rice_vinegar,
+                Teriyaki_Pineapple_Chicken_Meatballs.cornstarch,
+                Teriyaki_Pineapple_Chicken_Meatballs.water_cornstarch
+            };
+            return itemList;
+        }
+
+        public static List<Items> get_Chicken_Carnitas_Tacos_with_Avocado_Sauce()
+        {
+            List<Items> itemlist = new List<Items>
+            {
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.chimkin,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.oranges,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.limes,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.garlic,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.jollies,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.cilantro,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.olive_oil,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.chili_powder,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.oregano,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.cumin,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.salt,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.pepper,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.tortillas,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.onion,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.cheese,
+                new Items(), new Items(),
+                new Items(0, "For the", "Sauce:"),
+                new Items(), new Items(),
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.avocados,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.sauce_garlic,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.sauce_cilantro,
+                Chicken_Carnitas_Tacos_with_Avocado_Sauce.garlic_salt
+            };
+            return itemlist;
         }
     }
 }
