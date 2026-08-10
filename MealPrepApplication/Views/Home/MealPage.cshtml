@@ -1,0 +1,20 @@
+﻿
+@model MealPrepApplication.Models.Meal
+
+<h1>@Model.Title</h1>
+
+@if (Model.Ingredients != null && Model.Ingredients.Any())
+{
+	<ul>
+		@foreach (var item in Model.Ingredients)
+		{
+			<li>
+				@item.item_amt @item.item_unit @item.item_id
+			</li>
+		}
+	</ul>
+}
+else
+{
+	<p>No ingredients listed.</p>
+}
