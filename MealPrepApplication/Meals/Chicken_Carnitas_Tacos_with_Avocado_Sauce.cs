@@ -15,7 +15,7 @@
         public static Items salt = new Items(2, "tsp of", "Salt");
         public static Items pepper = new Items(1, "tsp of", "pepper");
         public static Items tortillas = new Items(16, "", "Tortillas");
-        public static Items onion = new Items(2 / 3, "of a", "Red Onion");
+        public static Items onion = new Items(0.33, "of a", "Red Onion");
         public static Items cheese = new Items(4, "cups of", "grated cheese");
         public static Items avocados = new Items(4, "", "Avocados");
         public static Items sauce_garlic = new Items(4, "cloves of", "Garlic");

@@ -1,8 +1,63 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Recipes";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<img src="@Url.Content("~/images/Meatballdog.png")" alt="Meatball dog" class="img-left" />
+<style>
+    body {
+        background-image: url('@Url.Content("~/images/Background.jpg")');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+<h1>@ViewData["Title"]</h1>
+<div class="card">
+    <ul class="list-group list-group-flush" id="recipeName">
+        <li class="list-group-item btn-link d-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="1">Chimkin Carnitas Tacos w/ avacoda, cilantro & lime sauce</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="2">Cilantro Orange Chimkin Bites</a>
+        </li>
+        <li class="list-group-item btn-link  d-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="3">Grilled Balsamic Chicken with Burrata and Peaches</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center" >
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="4">Marry Me Chimkin Meatballs</a>
+        </li>
+        <li class="list-group-item btn-link d-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="5">Hot Honey Chimken w/ Peach Salsa</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="6">Chimkin Enchilada Boats</a>
+        </li>
+        <li class="list-group-item btn-link  d-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="7">Spicy Mediterranean chimkin w/ Cucumber Salad</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="8">(Sheet pan) Mediterranean chimkin w/ Yogurt sauce</a>
+        </li>
+        <li class="list-group-item btn-link d-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="9">Balsamic Chimkin</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="10">Cheesy Asparagus Stuffed Chimkin</a>
+        </li>
+        <li class="list-group-item btn-link l d-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="11">Chimkin w/ Mediterranean Salsa</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center" >
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="12">Pork/Potato Taco Bowl</a>
+        </li>
+        <li class="list-group-item btn-linkd-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="13">Potato Thing</a>
+        </li>
+        <li class="list-group-item btn-link list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="14">Meal Prep</a>
+        </li>
+        <li class="list-group-item btn-linkd-flex justify-content-between align-items-center text-white" style="background-color: saddlebrown">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="MealPage" asp-route-id="15">Teriyaki Pineapple Chimkin Meatballs</a>
+        </li>
+    </ul>
 </div>

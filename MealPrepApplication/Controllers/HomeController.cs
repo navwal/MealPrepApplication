@@ -33,6 +33,11 @@ namespace MealPrepApplication.Controllers
                     Title = "Chimkin Carnitas Tacos w/ Avocado Sauce",
                     Ingredients = Utilities.getIngredients("Chimkin Carnitas Tacos w/ Avocado Sauce")
                 },
+                2 => new Meal
+                {
+                    Title = "Cilantro Orange Chimkin Bites",
+                    Ingredients = Utilities.getIngredients("Cilantro Orange Chimkin Bites")
+                },
                 3 => new Meal
                 {
                     Title = "Grilled Balsamic Chicken with Burrata and Peaches",
@@ -42,6 +47,56 @@ namespace MealPrepApplication.Controllers
                 {
                     Title = "Marry Me chimkin Meatballs",
                     Ingredients = Utilities.getIngredients("Marry Me Chicken Meatballs")
+                },
+                5 => new Meal
+                {
+                    Title = "Hot Honey Chimken w/ Peach Salsa",
+                    Ingredients = Utilities.getIngredients("Hot Honey Chimken w/ Peach Salsa")
+                },
+                6 => new Meal
+                {
+                    Title = "Chimkin Enchilada Boats",
+                    Ingredients = Utilities.getIngredients("Chimkin Enchilada Boats")
+                },
+                7 => new Meal
+                {
+                    Title = "Spicy Mediterranean chimkin w/ Cucumber Salad",
+                    Ingredients = Utilities.getIngredients("Spicy Mediterranean chimkin w/ Cucumber Salad")
+                },
+                8 => new Meal
+                {
+                    Title = "(Sheet pan) Mediterranean chimkin w/ Yogurt sauce",
+                    Ingredients = Utilities.getIngredients("(Sheet pan) Mediterranean chimkin w/ Yogurt sauce")
+                },
+                9 => new Meal
+                {
+                    Title = "Balsamic Chimkin",
+                    Ingredients = Utilities.getIngredients("Balsamic Chimkin")
+                },
+                10 => new Meal
+                {
+                    Title = "Cheesy Asparagus Stuffed Chimkin",
+                    Ingredients = Utilities.getIngredients("Cheesy Asparagus Stuffed Chimkin")
+                },
+                11 => new Meal
+                {
+                    Title = "Chimkin w/ Mediterranean Salsa",
+                    Ingredients = Utilities.getIngredients("Chimkin w/ Mediterranean Salsa")
+                },
+                12 => new Meal
+                {
+                    Title = "Pork/Potato Taco Bowl",
+                    Ingredients = Utilities.getIngredients("Pork/Potato Taco Bowl")
+                },
+                13 => new Meal
+                {
+                    Title = "Potato Thing",
+                    Ingredients = Utilities.getIngredients("Potato Thing")
+                },
+                14 => new Meal
+                {
+                    Title = "Meal Prep",
+                    Ingredients = Utilities.getIngredients("Meal Prep")
                 },
                 15 => new Meal
                 {

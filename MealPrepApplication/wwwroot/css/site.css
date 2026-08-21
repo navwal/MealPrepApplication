@@ -29,3 +29,54 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.img-right {
+    float: right;
+    margin-left: 10px;
+    width: 150px;
+    height: auto;
+}
+
+.img-left {
+    float: left;
+    margin-right: 10px;
+    width: 500px;
+    height: auto;
+}
+
+.content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 0 1rem;
+    width: 780px;
+    display: flex;
+}
+
+.sidenav {
+    border: 1px solid black;
+    flex-basis: 100px;
+}
+
+.main_home {
+    flex-grow: 1;
+}
+
+.page-wrapper {
+    display: flex; /* Arrange children side-by-side */
+}
+
+.left-container {
+    width: 200px; /* Fixed width for left section */
+    background-color: #f0f0f0;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.main-content {
+    flex: 1; /* Take remaining space */
+    padding: 15px;
+    background-color: #fff;
+}
