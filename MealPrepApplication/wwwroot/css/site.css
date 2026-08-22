@@ -80,3 +80,10 @@ body {
     padding: 15px;
     background-color: #fff;
 }
+
+.card-container {
+    display: flex; /* Arrange children horizontally */
+    align-items: flex-start; /* Align top edges */
+    gap: 20px; /* Space between card and paragraph */
+}
+

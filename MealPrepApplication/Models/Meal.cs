@@ -5,5 +5,6 @@ namespace MealPrepApplication.Models
     {
         public string Title { get; set; } = "";
         public List<Items> Ingredients { get; set; } = new();
+        public string Steps { get; set; } = "";
     }
 }

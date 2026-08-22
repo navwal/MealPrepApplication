@@ -63,6 +63,64 @@ namespace MealPrepApplication.Views.Shared
             return list;
         }
 
+        public static string getSteps(string mealname)
+        {
+            string str = "";
+
+            switch (mealname)
+            {
+                case "Chimkin Carnitas Tacos w/ Avocado Sauce":
+                    str = getSteps_Chicken_Carnitas_Tacos_with_Avocado_Sauce();
+                    break;
+                case "Cilantro Orange Chimkin Bites":
+                    str = getSteps_Cilantro_Orange_Chimkin_Bites();
+                    break;
+                case "Grilled Balsamic Chicken with Burrata and Peaches":
+                    str = getSteps_Balsamic_Chicken_with_Peaches_Burrata();
+                    break;
+                case "Marry Me Chicken Meatballs":
+                    str = getSteps_Marry_Me_Chicken_Meatballs_list();
+                    break;
+                case "Hot Honey Chimken w/ Peach Salsa":
+                    str = getSteps_Hot_Honey_Chimken_with_Peach_Salsa();
+                    break;
+                case "Chimkin Enchilada Boats":
+                    str = getSteps_Chimkin_Enchilada_Boats();
+                    break;
+                case "Spicy Mediterranean chimkin w/ Cucumber Salad":
+                    str = getSteps_Spicy_Mediterranean_Chimkin_with_Cucumber_Salad();
+                    break;
+                case "(Sheet pan) Mediterranean chimkin w/ Yogurt sauce":
+                    str = getSteps_Mediterranean_Chimkin_with_Yogurt_Sauce();
+                    break;
+                case "Balsamic Chimkin":
+                    str = getSteps_Balsamic_Chimkin();
+                    break;
+                case "Cheesy Asparagus Stuffed Chimkin":
+                    str = getSteps_Cheesy_Asparagus_Stuffed_Chimkin();
+                    break;
+                case "Chimkin w/ Mediterranean Salsa":
+                    str = getSteps_Chimkin_with_Mediterranean_Salsa();
+                    break;
+                case "Pork/Potato Taco Bowl":
+                    str = getSteps_Pork_Potato_Taco_Bowl();
+                    break;
+                case "Potato Thing":
+                    str = getSteps_Potato_Thing();
+                    break;
+                case "Meal Prep":
+                    str = getSteps_Meal_Prep();
+                    break;
+                case "Teriyaki Pineapple Chicken Meatballs":
+                    str = getSteps_Teriyaki_Pineapple_Chicken_Meatballs();
+                    break;
+                default:
+                    break;
+            }
+            return str;
+        }
+
+        #region Ingredients
         public static List<Items> get_Meal_Prep()
         {
             List<Items> list = new List<Items>
@@ -435,5 +493,371 @@ namespace MealPrepApplication.Views.Shared
             };
             return itemlist;
         }
+
+        #endregion
+
+        #region Steps
+
+        public static string getSteps_Chicken_Carnitas_Tacos_with_Avocado_Sauce()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Cilantro_Orange_Chimkin_Bites()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Cilantro_Orange_Chimkin_Bites.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Balsamic_Chicken_with_Peaches_Burrata()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Marry_Me_Chicken_Meatballs_list()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Hot_Honey_Chimken_with_Peach_Salsa()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Chimkin_Enchilada_Boats()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Spicy_Mediterranean_Chimkin_with_Cucumber_Salad()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Mediterranean_Chimkin_with_Yogurt_Sauce()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Balsamic_Chimkin()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Cheesy_Asparagus_Stuffed_Chimkin()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Chimkin_with_Mediterranean_Salsa()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Pork_Potato_Taco_Bowl()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Potato_Thing()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Meal_Prep()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Teriyaki_Pineapple_Chicken_Meatballs()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Test.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        #endregion
     }
 }
