@@ -37,7 +37,7 @@
 					}
 					else if (!String.IsNullOrWhiteSpace(item.item_id))
 					{
-						<li class="list-group-item d-flex justify-content-between align-items-center text-dark-emphasis" style="background-color: burlywood">
+						<li class="list-group-item d-flex justify-content-between align-items-center text-white" style="background-color: black">
 							@item.item_id
 						</li>
 					}
@@ -50,9 +50,9 @@
 			<p>No ingredients listed.</p>
 		}
 	</div>
-	<div style="margin-left: 15%; background-color: white;">
+	<div style="margin-left: 15%;">
 		<body>
-			<div style="white-space: pre-wrap;">
+			<div style="white-space: pre-wrap; width: 500px; font-weight: bold; font-size: 150%;">
 				@Model.Steps
 			</div>
 		</body>

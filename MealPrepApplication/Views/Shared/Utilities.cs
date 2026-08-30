@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using MealPrepApplication.Meals;
 using System.Runtime.InteropServices;
+using System.Collections.Generic;
 
 namespace MealPrepApplication.Views.Shared
 {
@@ -375,17 +376,20 @@ namespace MealPrepApplication.Views.Shared
 
         public static List<Items> get_Cilantro_Orange_Chimkin_Bites()
         {
-            List<Items> itemList = new List<Items> { Cilantro_Orange_Chicken_Bites.chimkin,
-                                                        Cilantro_Orange_Chicken_Bites.cumin,
-                                                        Cilantro_Orange_Chicken_Bites.paprika,
-                                                        Cilantro_Orange_Chicken_Bites.salt,
-                                                        Cilantro_Orange_Chicken_Bites.cilantro,
-                                                        Cilantro_Orange_Chicken_Bites.oranges,
-                                                        Cilantro_Orange_Chicken_Bites.honey,
-                                                        Cilantro_Orange_Chicken_Bites.garlic,
-                                                        Cilantro_Orange_Chicken_Bites.white_vinegar,
-                                                        Cilantro_Orange_Chicken_Bites.soy_sauce
-            };
+            List<Items> ingredients = Cilantro_Orange_Chicken_Bites.ingredients;
+            List<Items> sauce = Cilantro_Orange_Chicken_Bites.sauce;
+            List<Items> itemList = ingredients.Concat(sauce).ToList();
+            //{ Cilantro_Orange_Chicken_Bites.chimkin,
+            //                                            Cilantro_Orange_Chicken_Bites.cumin,
+            //                                            Cilantro_Orange_Chicken_Bites.paprika,
+            //                                            Cilantro_Orange_Chicken_Bites.salt,
+            //                                            Cilantro_Orange_Chicken_Bites.cilantro,
+            //                                            Cilantro_Orange_Chicken_Bites.oranges,
+            //                                            Cilantro_Orange_Chicken_Bites.honey,
+            //                                            Cilantro_Orange_Chicken_Bites.garlic,
+            //                                            Cilantro_Orange_Chicken_Bites.white_vinegar,
+            //                                            Cilantro_Orange_Chicken_Bites.soy_sauce
+            //};
             return itemList;
         }
 
