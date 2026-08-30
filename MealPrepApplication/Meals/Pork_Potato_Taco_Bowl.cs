@@ -17,10 +17,10 @@
             };
         public static List<Items> pico = new List<Items> {
             new Items(0, "", "For Pico de Gallo:"),
-            new Items(4, "_", "Tomatoes"),
-            new Items(2, "_", "Onions"),
+            new Items(4, "", "Tomatoes"),
+            new Items(2, "", "Onions"),
             new Items(2, "small bunches", "Cilantro"),
-            new Items(4, "_", "Limes")
+            new Items(4, "", "Limes")
             };
         public static List<Items> sauce = new List<Items> {
             new Items(0, "", "For Chipotle Sauce"),

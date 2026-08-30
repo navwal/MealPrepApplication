@@ -6,16 +6,16 @@
             new Items(2, "lbs", "ground chicken"),
             new Items(0.5, "cups", "Parmesan"),
             new Items(0.5, "cups", "Panko Breadcrumbs"),
-            new Items(1, "_", "White Onion"),
+            new Items(1, "", "White Onion"),
             new Items(4, "cloves", "Garlic"),
-            new Items(2, "_", "Eggs"),
+            new Items(2, "", "Eggs"),
             new Items(2, "Tbsp", "Italian Seasoning"),
             new Items(1, "tsp", "Salt"),
             new Items(0.5, "tsp", "Pepper")
             };
         public static List<Items> sauce = new List<Items> {
             new Items(0, "", "For Sauce:"),
-            new Items(0.5, "_", "White Onion"),
+            new Items(0.5, "", "White Onion"),
             new Items(6, "cloves", "Garlic"),
             new Items(2, "cups", "Chicken broth"),
             new Items(1.5, "cups", "Heavy cream"),

@@ -3,8 +3,8 @@
     public class Cheesy_Asparagus_Stuffed_Chimkin
     {
         public static List<Items> ingredients = new List<Items> {
-            new Items(8, "_", "Chimkin Breasts"),
-            new Items(24, "_", "Asparagus"),
+            new Items(8, "", "Chimkin Breasts"),
+            new Items(24, "", "Asparagus"),
             new Items(16, "oz", "Mozzarella"),
             new Items(8, "oz", "Sun Dried Tomatoes"),
             new Items(2, "tsp", "Pepper"),

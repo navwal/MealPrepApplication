@@ -16,7 +16,7 @@
         public static List<Items> salsa = new List<Items> {
             new Items(0, "", "For Topping"),
             new Items(16, "oz", "fresh Burrata"),
-            new Items(8, "_", "Peaches"),
+            new Items(8, "", "Peaches"),
             new Items(0.5, "cup", "fresh Basil")
     };
     }

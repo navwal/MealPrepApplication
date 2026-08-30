@@ -16,7 +16,7 @@
             };
         public static List<Items> salad = new List<Items> {
             new Items(0, "", "For Salad:"),
-            new Items(4, "_", "Cucumbers"),
+            new Items(4, "", "Cucumbers"),
             new Items(0.66, "cup of", "Red Onion"),
             new Items(1, "cup", "Greek Yogurt"),
             new Items(2, "tbsp", "Lemon Juice"),

@@ -14,13 +14,13 @@
             new Items(1, "tbsp", "Oregano"),
             new Items(2, "tsp", "Salt"),
             new Items(0.5, "tsp", "Pepper"),
-            new Items(6, "_", "Bell Peppers"),
-            new Items(2, "_", "Red Onions")
+            new Items(6, "", "Bell Peppers"),
+            new Items(2, "", "Red Onions")
             };
         public static List<Items> veggies = new List<Items> {
             new Items(0, "", "For Veggies:"),
-            new Items(1, "_", "Olive Oil"),
-            new Items(1, "_", "Salt")
+            new Items(1, "", "Olive Oil"),
+            new Items(1, "", "Salt")
             };
         public static List<Items> sauce = new List<Items> {
             new Items(0, "", "For Sauce:"),

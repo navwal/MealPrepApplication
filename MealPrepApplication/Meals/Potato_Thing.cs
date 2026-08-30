@@ -13,7 +13,7 @@
             };
         public static List<Items> potatoes = new List<Items> {
             new Items(0, "", "For Potatoes:"),
-            new Items(6, "_", "Potatoes"),
+            new Items(6, "", "Potatoes"),
             new Items(1, "zest", "Lemon"),
             new Items(1, "juice", "Lemon"),
             new Items(6, "tsp", "Olive Oil"),

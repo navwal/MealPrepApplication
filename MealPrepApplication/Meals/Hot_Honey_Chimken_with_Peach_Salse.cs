@@ -4,7 +4,7 @@
     {
         public static List<Items> ingredients = new List<Items> {
             new Items(3, "lbs", "Chimkin (about 8)"),
-            new Items(1, "_", "Oil"),
+            new Items(1, "", "Oil"),
             new Items(1, "season", "Paprika"),
             new Items(1, "season", "Cumin"),
             new Items(1, "season", "Salt"),
@@ -20,11 +20,11 @@
         };
         public static List<Items> salsa = new List<Items> {
             new Items(0, "", "For Salsa:"),
-            new Items(8, "_", "Peaches"),
-            new Items(2, "_", "Jalapenos"),
+            new Items(8, "", "Peaches"),
+            new Items(2, "", "Jalapenos"),
             new Items(0.5, "cup", "Red Onion"),
             new Items(0.5, "cup", "Cilantro"),
-            new Items(2, "_", "Limes")
+            new Items(2, "", "Limes")
         };
     }
 }
