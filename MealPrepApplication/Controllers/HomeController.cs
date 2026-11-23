@@ -118,6 +118,54 @@ namespace MealPrepApplication.Controllers
                     Ingredients = Utilities.getIngredients("Teriyaki Pineapple Chicken Meatballs"),
                     Steps = Utilities.getSteps("Teriyaki Pineapple Chicken Meatballs")
                 },
+                16 => new Meal
+                {
+                    Title = "Teriyaki Chimkin Summer Rolls",
+                    Ingredients = Utilities.getIngredients("Teriyaki Chimkin Summer Rolls"),
+                    Steps = Utilities.getSteps("Teriyaki Chimkin Summer Rolls")
+                },
+                17 => new Meal
+                {
+                    Title = "Cream Cheese Chimkin",
+                    Ingredients = Utilities.getIngredients("Cream Cheese Chimkin"),
+                    Steps = Utilities.getSteps("Cream Cheese Chimkin")
+                },
+                18 => new Meal
+                {
+                    Title = "Smokey Chimkin with Green Goddess Sauce",
+                    Ingredients = Utilities.getIngredients("Smokey Chimkin with Green Goddess Sauce"),
+                    Steps = Utilities.getSteps("Smokey Chimkin with Green Goddess Sauce")
+                },
+                19 => new Meal
+                {
+                    Title = "Beefy Brothy Bowl",
+                    Ingredients = Utilities.getIngredients("Beefy Brothy Bowl"),
+                    Steps = Utilities.getSteps("Beefy Brothy Bowl")
+                },
+                20 => new Meal
+                {
+                    Title = "Diabetic Friendly CBR Bake",
+                    Ingredients = Utilities.getIngredients("Diabetic Friendly CBR Bake"),
+                    Steps = Utilities.getSteps("Diabetic Friendly CBR Bake")
+                },
+                21 => new Meal
+                {
+                    Title = "Peruvian Chimkin with Green Sauce",
+                    Ingredients = Utilities.getIngredients("Peruvian Chimkin with Green Sauce"),
+                    Steps = Utilities.getSteps("Peruvian Chimkin with Green Sauce")
+                },
+                22 => new Meal
+                {
+                    Title = "Southwest Chimkin Bowl",
+                    Ingredients = Utilities.getIngredients("Southwest Chimkin Bowl"),
+                    Steps = Utilities.getSteps("Southwest Chimkin Bowl")
+                },
+                23 => new Meal
+                {
+                    Title = "High Protein Grilled Chimkin Alfredo",
+                    Ingredients = Utilities.getIngredients("High Protein Grilled Chimkin Alfredo"),
+                    Steps = Utilities.getSteps("High Protein Grilled Chimkin Alfredo")
+                },
                 _ => new Meal
                 {
                     Title = "Meal Name goes here",

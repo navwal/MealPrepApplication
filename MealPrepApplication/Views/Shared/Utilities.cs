@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.SignalR;
-using MealPrepApplication.Meals;
-using System.Runtime.InteropServices;
+﻿using MealPrepApplication.Meals;
+using Microsoft.AspNetCore.SignalR;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace MealPrepApplication.Views.Shared
 {
     public class Utilities
     {
+        #region Get Ingredients
         public static List<Items> getIngredients(string mealname)
         {
             List<Items> list = new List<Items>();
@@ -58,12 +60,38 @@ namespace MealPrepApplication.Views.Shared
                 case "Teriyaki Pineapple Chicken Meatballs":
                     list = get_Teriyaki_Pineapple_Chicken_Meatballs();
                     break;
+                case "Teriyaki Chimkin Summer Rolls":
+                    list = get_Teriyaki_Chimkin_Summer_Rolls();
+                    break;
+                case "Cream Cheese Chimkin":
+                    list = get_Cream_Cheese_Chimkin();
+                    break;
+                case "Smokey Chimkin with Green Goddess Sauce":
+                    list = get_Smokey_Chimkin_with_Green_Goddess_Sauce();
+                    break;
+                case "Beefy Brothy Bowl":
+                    list = get_Beefy_Brothy_Bowl();
+                    break;
+                case "Diabetic Friendly CBR Bake":
+                    list = get_Diabetic_Friendly_CBR_Bake();
+                    break;
+                case "Peruvian Chimkin with Green Sauce":
+                    list = get_Peruvian_Chimkin_with_Green_Sauce();
+                    break;
+                case "Southwest Chimkin Bowl":
+                    list = get_Southwest_Chimkin_Bowl();
+                    break;
+                case "High Protein Grilled Chimkin Alfredo":
+                    list = get_High_Protein_Grilled_Chimkin_Alfredo();
+                    break;
                 default:
                     break;
             }
             return list;
         }
+        #endregion
 
+        #region Get Steps
         public static string getSteps(string mealname)
         {
             string str = "";
@@ -115,11 +143,37 @@ namespace MealPrepApplication.Views.Shared
                 case "Teriyaki Pineapple Chicken Meatballs":
                     str = getSteps_Teriyaki_Pineapple_Chicken_Meatballs();
                     break;
+                case "Teriyaki Chimkin Summer Rolls":
+                    str = getSteps_Teriyaki_Chimkin_Summer_Rolls();
+                    break;
+                    break;
+                case "Cream Cheese Chimkin":
+                    str = getSteps_Cream_Cheese_Chimkin();
+                    break;
+                case "Smokey Chimkin with Green Goddess Sauce":
+                    str = getSteps_Smokey_Chimkin_with_Green_Goddess_Sauce();
+                    break;
+                case "Beefy Brothy Bowl":
+                    str = getSteps_Beefy_Brothy_Bowl();
+                    break;
+                case "Diabetic Friendly CBR Bake":
+                    str = getSteps_Diabetic_Friendly_CBR_Bake();
+                    break;
+                case "Peruvian Chimkin with Green Sauce":
+                    str = getSteps_Peruvian_Chimkin_with_Green_Sauce();
+                    break;
+                case "Southwest Chimkin Bowl":
+                    str = getSteps_Southwest_Chimkin_Bowl();
+                    break;
+                case "High Protein Grilled Chimkin Alfredo":
+                    str = getSteps_High_Protein_Grilled_Chimkin_Alfredo();
+                    break;
                 default:
                     break;
             }
             return str;
         }
+        #endregion
 
         #region Ingredients
         public static List<Items> get_Meal_Prep()
@@ -258,6 +312,73 @@ namespace MealPrepApplication.Views.Shared
             List<Items> sauce = Chicken_Carnitas_Tacos_with_Avocado_Sauce.sauce;
             List<Items> itemlist = ingredients.Concat(sauce).ToList();
             return itemlist;
+        }
+
+        public static List<Items> get_Teriyaki_Chimkin_Summer_Rolls()
+        {
+            List<Items> ingredients = Teriyaki_Chimkin_Summer_Rolls.ingredients;
+            List<Items> chimkin = Teriyaki_Chimkin_Summer_Rolls.chimkin;
+            List<Items> sauce = Teriyaki_Chimkin_Summer_Rolls.sauce;
+            List<Items> itemlist = ingredients.Concat(chimkin.Concat(sauce)).ToList();
+            return itemlist;
+        }
+
+        public static List<Items> get_Cream_Cheese_Chimkin()
+        {
+            List<Items> ingredients = Cream_Cheese_Chimkin.ingredients;
+            List<Items> sauce = Cream_Cheese_Chimkin.sauce;
+            List<Items> itemList = ingredients.Concat(sauce).ToList();
+            return itemList;
+        }
+        public static List<Items> get_Smokey_Chimkin_with_Green_Goddess_Sauce()
+        {
+            List<Items> ingredients = Smokey_Chimkin_with_Green_Goddess_Sauce.ingredients;
+            List<Items> sauce = Smokey_Chimkin_with_Green_Goddess_Sauce.sauce;
+            List<Items> itemList = ingredients.Concat(sauce).ToList();
+            return itemList;
+        }
+
+        public static List<Items> get_Beefy_Brothy_Bowl()
+        {
+            List<Items> ingredients = Beefy_Brothy_Bowl.ingredients;
+            List<Items> broth = Beefy_Brothy_Bowl.broth;
+            List<Items> itemList = ingredients.Concat(broth).ToList();
+            return itemList;
+        }
+
+        public static List<Items> get_Diabetic_Friendly_CBR_Bake()
+        {
+            List<Items> ingredients = Diabetic_Friendly_CBR_Bakc.ingredients;
+            List<Items> ranch = Diabetic_Friendly_CBR_Bakc.ranch;
+            List<Items> itemList = ingredients.Concat(ranch).ToList();
+            return itemList;
+        }
+
+        public static List<Items> get_Peruvian_Chimkin_with_Green_Sauce()
+        {
+            List<Items> ingredients = Peruvian_Chimkin_With_Green_Sauce.ingredients;
+            List<Items> sauce = Peruvian_Chimkin_With_Green_Sauce.sauce;
+            List<Items> potatoes = Peruvian_Chimkin_With_Green_Sauce.potatoes;
+            List<Items> veggies = Peruvian_Chimkin_With_Green_Sauce.veggie;
+            List<Items> itemList = ingredients.Concat(sauce.Concat(potatoes.Concat(veggies))).ToList();
+            return itemList;
+        }
+
+        public static List<Items> get_Southwest_Chimkin_Bowl()
+        {
+            List<Items> ingredients = Southwest_Chimkin_Bowl.ingredients;
+            List<Items> salsa = Southwest_Chimkin_Bowl.salsa;
+            List<Items> chipotle = Southwest_Chimkin_Bowl.chipotle;
+            List<Items> itemList = ingredients.Concat(salsa.Concat(chipotle)).ToList();
+            return itemList;
+        }
+
+        public static List<Items> get_High_Protein_Grilled_Chimkin_Alfredo()
+        {
+            List<Items> ingredients = Highe_Protein_Grilled_Chimkin_Alfredo.ingredients;
+            List<Items> alfredo = Highe_Protein_Grilled_Chimkin_Alfredo.alfredo;
+            List<Items> itemList = ingredients.Concat(alfredo).ToList();
+            return itemList;
         }
 
         #endregion
@@ -603,6 +724,198 @@ namespace MealPrepApplication.Views.Shared
         public static string getSteps_Teriyaki_Pineapple_Chicken_Meatballs()
         {
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Teriyaki_pineapple_chimkin_meatballs.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Teriyaki_Chimkin_Summer_Rolls()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Teriyaki_Chimkin_Summer_Rolls.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Cream_Cheese_Chimkin()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Cream_Cheese_Chimkin.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Smokey_Chimkin_with_Green_Goddess_Sauce()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Smokey_Chimkin_with_Green_Goddess_Sauce.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Beefy_Brothy_Bowl()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Beefy_Brothy_Bowl.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Diabetic_Friendly_CBR_Bake()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Diabetic_Friendly_CBR_Bake.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Peruvian_Chimkin_with_Green_Sauce()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Peruvian_Chimkin_with_Green_Sauce.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_Southwest_Chimkin_Bowl()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "Southwest_Chimkin_Bowl.txt");
+            string fileContent = "";
+
+            try
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    fileContent = System.IO.File.ReadAllText(filePath);
+                }
+                else
+                {
+                    fileContent = "File not found.";
+                }
+            }
+            catch (IOException ex)
+            {
+                fileContent = $"Error reading file: {ex.Message}";
+            }
+
+            return fileContent;
+        }
+
+        public static string getSteps_High_Protein_Grilled_Chimkin_Alfredo()
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Steps", "High_Protein_Grilled_Chimkin_Alfredo.txt");
             string fileContent = "";
 
             try

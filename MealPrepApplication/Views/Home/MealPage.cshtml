@@ -18,12 +18,13 @@
 		@if (Model.Ingredients != null && Model.Ingredients.Any())
 		{
 			int alternate_row = 0;
-			<ul class="list-group list-group-flush">
+			<ul class="list-group list-group-flush" id="ingredients">
 				@foreach (var item in Model.Ingredients)
 				{
 					@if (alternate_row % 2 == 0 && item.item_amt > 0)
 					{
 						<li class="list-group-item text-white d-flex justify-content-between align-items-center" style="background-color: saddlebrown">
+							<input class="form-check-input" type="checkbox" id="flexCheckbox" value="@item.item_id @item.item_amt @item.item_unit" />
 							@item.item_id
 							<span class="badge bg-secondary rounded-pill">@item.item_amt @item.item_unit</span>
 						</li>
@@ -31,6 +32,7 @@
 					else if (item.item_amt > 0)
 					{
 						<li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+							<input class="form-check-input" type="checkbox" id="flexCheckboxAlt" value="@item.item_id @item.item_amt @item.item_unit" />
 							@item.item_id
 							<span class="badge bg-secondary rounded-pill">@item.item_amt @item.item_unit</span>
 						</li>
@@ -58,3 +60,39 @@
 		</body>
 	</div>
 </div>
+<button id="exportBtn" style="margin-top: 5%">Export unchecked to CSV</button>
+<script>
+    document.getElementById("exportBtn").addEventListener("click", function () {
+        try {
+            const list = document.querySelectorAll("#ingredients input[type='checkbox']");
+            let uncheckedItems = [];
+
+            list.forEach(cb => {
+                if (!cb.checked) {
+                    uncheckedItems.push(cb.value);
+                }
+            });
+
+            if (uncheckedItems.length === 0) {
+                alert("All items are checked. Nothing to export.");
+                return;
+            }
+
+            // Create CSV content
+            let csvContent = "data:text/csv;charset=utf-8," 
+                           + uncheckedItems.map(item => `"${item}"`).join("\n");
+
+            // Create a download link
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "Required_items.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (err) {
+            console.error("Error exporting CSV:", err);
+            alert("An error occurred while exporting.");
+        }
+    });
+</script>
